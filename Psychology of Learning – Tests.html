@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>Psychology of Learning – Tests</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>
+:root{--bg:#fafaf7;--fg:#1c1c1a;--card:#fff;--bd:#ddd;--ac:#2f5d8a;--ok:#1f7a3d;--no:#b3261e;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171716;--fg:#eee;--card:#222221;--bd:#444;--ac:#7fb0e0;--ok:#5fcf86;--no:#ff8a80}}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.45 system-ui,sans-serif}
+main{max-width:720px;margin:0 auto;padding:16px}
+h1{font-size:1.4rem}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+button{font:inherit;padding:12px;border:1px solid var(--bd);border-radius:10px;background:var(--card);color:var(--fg)}
+button.p{background:var(--ac);color:#fff;border:0;width:100%;margin:16px 0}
+.q{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:12px;margin:12px 0}
+label{display:block;padding:8px;border-radius:8px;margin:2px 0}
+.ok{color:var(--ok);font-weight:600}.no{color:var(--no);font-weight:600}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding:6px 0;font-weight:600}
+</style></head><body><main id="app"></main>
+<script>
+const W=[
+[["What is Psychology?",["Just a social media trend","An art of living","A subject about human body","A study of cognitive processes & behavior"],3],
+["A broad field of study that explores a variety of questions about thoughts, feelings and actions is ___?",["Society","Globalization","Psychology","Social Science"],2],
+["Learning has been a central topic of research in ___.",["Chemistry","Physics","Mathematics","Psychology"],3],
+["The word Psyche means ___?",["Body or physique","Mind or soul","Spirituality","Hormones"],1],
+["The ___ of learning focuses on how people learn.",["psychology","english","chemistry","none of the given"],0],
+["“To help people to function effectively and fulfill their own unique potential” is the aim of ___?",["Humanistic psychology","Evolutionary biology","Computer science","Microbiology"],0],
+["Psychology is not an independent science, but dependent on other fields.",["True","False"],1],
+["The study of changes in an individual’s behavior during his/her lifetime is called ___.",["Hormonal psychology","Gender psychology","Developmental Psychology","Genetics or Heredity"],2],
+["The study of differences and similarities in the behavior of animals of different species is called ___.",["Developmental psychology","Cultural psychology","Personality psychology","Comparative Psychology"],3],
+["Humans are incapable of learning.",["True","False"],1]],
+[["Learning is often seen as the contiguous causal effect of ____ on behavior.",["blood","bone density","trauma","experience"],3],
+["In order to say that learning has occurred, a hidden change in behavior must occur.",["True","False"],1],
+["Which of the following is not a mental construct?",["skeleton","knowledge","representations","associations"],0],
+["Learning changes the ___ structure of the brain through continuous interactions between the learner and the external environment.",["physical","social","biological","none of the given"],0],
+["___ shapes the learning process.",["Only thoughts","Only emotions","Both thoughts and emotions","Neither thoughts nor emotions"],2],
+["Watson's Little Albert experiment conditioned a small child to ___ a white rat.",["fear","love","hate","play with"],0],
+["Behaviorism dominated psychology for much of the early ___ century.",["20th","19th","18th","17th"],0],
+["The state of “conscious incompetence” may be valuable ____ of a learning experience.",["at the end","in the middle","2 years after the end","at the start"],3],
+["Which of the following is not an outcome of effective e-learning?",["wider range of strategies","more reflective approach","more positive emotions towards learning","more disconnected knowledge"],3],
+["Instrumental conditioning is an example of ___ learning.",["sensitization","habituation","associative","meaningful"],2]],
+[["The three major types of learning described by ___ psychology are classical conditioning, operant conditioning and observational learning.",["cognitive","behavioral","emotional","evolutionary"],1],
+["According to the view of Watson, psychology is ___.",["subjective","only descriptive","experimental","about internal mental processes that cannot be measured and observed"],2],
+["___ is given by Ivan Pavlov.",["Operant conditioning","Functional conditioning","Classical conditioning","Modern conditioning"],2],
+["The process by which organisms learn to respond to certain stimuli but not to others is known as ___.",["stimulus generalization","stimulus appreciation","stimulus discrimination","stimulus differentiation"],2],
+["Higher-order conditioning is intrinsically weaker than its first-order counterpart.",["True","False"],0],
+["____ is the process of gradually changing the quality of a response.",["Shaping","Modeling","Cueing","Shifting"],0],
+["The works of ___ were instrumental in engendering the dramatic shift from behaviorism to cognitive theories.",["Edward C. Tolman","Jean Piaget","German Gestalt","All of the given"],3],
+["___ intelligence is the ability to perceive the visual–spatial world accurately and involves sensitivity to color, line, shape, form, space, and the patterns of spaces.",["Interpersonal","Spatial","Bodily-kinesthetic","Linguistic"],1],
+["Sternberg proposed his theory in 1985 as an alternative to the idea of the ___.",["general intelligence factor","multiple intelligences","specific intelligence factor","unconscious intelligence"],0],
+["Which of the following is not a kind of product in the structure of intellect model?",["symbolic","classes","systems","implications"],0]],
+[["The connections between nerve cells are called ___.",["systems","syntaxes","neurons","synapses"],3],
+["In order to create a ___, information must be changed into a usable form, which occurs through encoding.",["past memory","new imagination","new memory","past imagination"],2],
+["Calling back the stored information in response to some cue for use in a process or activity is called ___.",["Retrieval","Recall","Recollection","All of the given"],3],
+["For many with ___ deficits, reading facial expressions and knowing how to respond are confusing daily challenges.",["memory","intelligence","social cognition","biological cognition"],2],
+["The Information Processing View of Learning assumes that there are limits to how much information can be processed at each stage.",["True","False"],0],
+["The Information Processing View of Learning assumes that information process is involved in ___.",["forgetting","remembering","perceiving","All of the given"],3],
+["The capacity of the sensory register is ___.",["very small","very large","7+/-2 chunks","unlimited"],1],
+["Most children do not begin to engage in rehearsal on their own until about age ___.",["seven","two","thirteen","one"],0],
+["___ provides an interface between the sub-systems of working memory and the part of long term memory specialized for episodic memory.",["Phonological loop","Visuo-spatial sketchpad","Retrieval buffer","Episodic buffer"],3],
+["Memories of specific episodes of one’s life refers to ___.",["declarative memory","experimental episodic memory","autobiographical episodic memory","procedural memory"],2]],
+[["___ thinking is the ability to create mental representations of objects, places, events, or people in your mind.",["General","Creative","Divergent","Symbolic"],3],
+["We compare new information to our ___ of the person, place, or thing, so we know how to categorize it mentally.",["protofit","protobite","prototype","none of the given"],2],
+["Which of the following is not true?",["Thinking is a higher mental process","Thinking is a sub-vocal talking","Thinking is fulfilling a need or problem solving","Thinking is only done in verbal symbols"],3],
+["Mental images are ___.",["Auditory","Visual","Gustatory","All of the given"],3],
+["___ organize complex phenomena into simpler, easily understandable, and usable categories and help to solve our problems.",["Concepts","Propositions","Constructs","Components"],0],
+["The lowermost level of Bloom’s taxonomy is ___.",["remember","apply","understand","analyze"],0],
+["The psychomotor domain of Bloom’s taxonomy is concerned with ___.",["Biological makeup","Thoughts and beliefs","Feelings and emotions","Skilled behavior"],3],
+["Which of the following is an example of meta-cognition skills?",["Ignoring your limits","Self-monitoring","Skimming all important information","All of the given"],1],
+["___ critical thinking skill helps you analyze and process information to come to an unbiased conclusion.",["Open-mindedness","Self-regulation","Self-control","Observation"],0],
+["The inspiration phase of the creative thinking process refers to the ___ stage.",["Incubation","Insight","Evaluation","Preparation"],3]],
+[["Which of the following is true about motivation?",["It is a physical impulse","It is an external process","It has a willingness to activate but not channel the attitudes of learners","None of the given"],3],
+["The term “motivation” comes from a ___ word.",["Greek","Latin","Hindi","Bengali"],1],
+["It is called extrinsic motivation if causal factor is ___.",["curiosity","social pressure","self-satisfaction","needs"],1],
+["___ motivation is considered more crucial for students as it is associated with deep learning, better performance and self-efficacy.",["Intrinsic","Extrinsic","Introjected regulation","None of the given"],0],
+["___ proposed that there are three primary drives that drive human behavior.",["Hull","Watson","Piaget","Gestalt"],0],
+["Expectancy Theory of Motivation was developed by ___.",["Vroom","Hull","Murray","None of the given"],0],
+["An example of ___ is thinking, “If I work hard I can achieve the targets my boss has set for me”.",["purposeful","valence","instrumentality","expectancy"],3],
+["In SMART goals, T stands for ___.",["Temporary","Time-based","Tough","Testing"],1],
+["Friendship is a ___ need in Maslow’s hierarchy.",["Love and belonging","Esteem","Physiological","Safety"],0],
+["___ theory differentiates between autonomous motivation and controlled motivation.",["Arousal","Goal-setting","Need hierarchy","Self-determination"],3]],
+[["According to Daniel Goleman, ___ component of emotional intelligence focuses on how we handle relationships with others.",["self-awareness","motivation","empathy","emotional regulation"],2],
+["Emotional intelligence can be considered a type of ___ intelligence.",["academic","genetic","social","external"],2],
+["Noticing a difficult emotion and slowing down or resisting any impulsive action highlights ___ component of emotional intelligence.",["Self-regulation","Motivation","Emotional literacy","Empathy"],0],
+["The following are signs of emotional intelligence, except ___.",["strong sense of curiosity","holding onto mistakes","ability to manage emotions in difficult situations","self-confidence"],1],
+["Perceiving emotions means ___.",["Ignoring signals","Understanding only what somebody is saying to you","Understanding only somebody’s facial expression","Understanding both verbal and nonverbal signals"],3],
+["___ suggests that 10 distinct components provide the scaffolding of emotionally and socially intelligent behaviors.",["Bar-On","Goleman","Salovey","Mayer"],0],
+["Which of the following is a facilitator of EQ?",["optimism","happiness","independence","all of the given"],3],
+["___ is a strategy for improving one’s self-awareness.",["rejecting feedback","using critical self-talk daily","developing a fixed mindset","pursuing one’s passion"],3],
+["Having students create autobiographies is an example of creating opportunities for ___.",["emotional labor","emotional contagion","metacognition","none of the given"],2],
+["Which of the following is not true about management of emotions?",["It is essentially a private act","It is directly regulated by others","It is influenced by cultural norms","It is influenced by what society defines as appropriate to feel and express"],1]],
+[["Which of the following is false about learning according to Gagne’s definition?",["It is a change in human disposition","It persists over a period of time","It is simply ascribable to processes of growth","None of the above"],2],
+["Manual or physical skills come under ___ component of Bloom’s taxonomy.",["Cognitive","Affective","Psychomotor","Physical"],2],
+["Reflection, learning and education was explored by ___.",["Carl Rogers","John Watson","Benjamin Bloom","John Dewey"],3],
+["The principle of ___ refers to how close in time two events must be for a bond to be formed.",["behavior","reinforcement","repetition","contiguity"],3],
+["___ gives information to learners about their success or failure concerning the task at hand.",["Cognitive feedback","Emotional feedback","Reinforcement","Physical feedback"],0],
+["The ___ orientation to learning has a quality of personal involvement—the whole person in both feeling and cognitive aspects.",["behavioral","cognitive","humanistic","social"],2],
+["Learning through play is ___ learning.",["primary","secondary","passive","active"],3],
+["People with ___ learning style are prone to sorting their ideas after speaking, rather than thinking ideas through before.",["logical","solitary","visual","auditory"],3],
+["Which of the following statements is false?",["Effective instruction is static","Effective instruction is eclectic","Effective instruction is generative","Effective instruction is interactive"],0],
+["In ADDIE model, I stands for ___.",["instruction","implementation","integration","induction"],1]],
+[["Simon defined learning as changes in a system that result in ___ over time on tasks similar to those done previously.",["boredom","decreased anxiety","improved performance","reduced performance"],2],
+["Robert Gagne defined learning as ___.",["a change in human disposition or capacity","a change that persists over a period of time","a change not simply ascribable to processes of growth","all of the given"],3],
+["Psychomotor skills are ___ skills.",["cognitive","spiritual","mental","physical"],3],
+["Returning to experience refers to ___.",["attending to feelings","re-examining experience in the light of one’s intent and existing knowledge","using helpful feelings and removing obstructive ones","recalling or detailing salient events"],3],
+["Which of the following assumptions does not come under the behaviorist orientation to learning?",["Differences between individuals are important as they will affect learning","Observable behavior rather than internal thought processes are the focus of study","Environment shapes one’s behavior","The principle of contiguity is central"],0],
+["Reinforcement can come through sharing of results rather than a reward.",["True","False"],0],
+["___ has contributed to the humanistic orientations to learning.",["linguistic","kinesthetic","visual","Carl Rogers"],3],
+["In the process of learning, which of the following is not a component of output?",["certification","attitude change","knowledge enhancement","training plan"],3],
+["Ambience, space and decorum do not affect learning.",["True","False"],1],
+["Role-playing can motivate ___ type of learners effectively.",["solitary","social","reading/writing","logical/analytical"],1]],
+[["The word ‘pedagogy’ has been derived from the ___ word “pedagogue”.",["Latin","Sanskrit","Greek","English"],2],
+["Which of the following statements is not true about pedagogy?",["It is a method or way of teaching","It is derived from the Greek word “pedagogue”","It helps a teacher understand how learning should be facilitated","It harms the quality of teaching and learning"],3],
+["Pedagogy can enhance the student-teacher relationship.",["True","False"],0],
+["___ learning is based on the model that knowledge can be created within a population where members actively interact by sharing experiences and take on asymmetry roles.",["integrative","inquiry-based","collaborative","constructivist"],2],
+["The Pedagogical Model provides an overview of the learning cycle and breaks it down into ___ domains or phases of instruction.",["five","three","two","seven"],0],
+["Which of the following is not a type of inquiry-based approach?",["confrontation","structure","guided","open"],0],
+["In experiential learning, students are engaged ___.",["intellectually","soulfully","socially","all of the given"],3],
+["___ stage of experiential theory by Kolb focuses on planning.",["concrete experience","abstract conceptualization","reflective observation","active experimentation"],3],
+["People with a ___ learning style can often act on “gut feeling” and will rely on others' analysis rather than their own.",["accommodating","converging","diverging","assimilating"],0],
+["According to the ___ principle, students learn better from animation and narration than from animation and on-screen text.",["multimedia","modality","coherence","temporal contiguity"],1]],
+[["E-learning is any form of ___.",["teaching","training","tutoring","all of the given"],3],
+["___ is a feature of e-learning.",["difficulty in access","user friendliness","social injustice","closed learning"],1],
+["E-learning is a synonym of audio-visual learning, multimedia learning, and distance learning.",["True","False"],1],
+["Which of the following is not a type of e-learning?",["text-driven","interactive","simulation","physical"],3],
+["Which of the following is not a benefit of e-learning?",["It can accommodate the need of a housewife","People can revise the learning content as many times as they want","It facilitates in developing and communicating new training policies","None of the given"],3],
+["Good learners know ___.",["What they are learning","Why they are learning","How they are learning","All of the given"],3],
+["Learners may multitask when engaging in an online course, which could be resulting in ___.",["hyperfocus","better retrieval","shorter attention spans","None of the given"],2],
+["___ learning is the crucial determinant of successful e-learning.",["passive","retrospective","social","active"],3],
+["The brain can process 36,000 visual cues per ___.",["hour","second","day","year"],0],
+["For effective learning, online courses should ___.",["use headings","use complex language","present long pieces of text","use random images"],0]],
+[["During Covid-19 the world was busy preparing 1.5 billion learners for the new normal, i.e., ___ learning.",["ineffective","physical","remote","experiential"],2],
+["To develop learner readiness for online learning, training sessions on ___ are helpful.",["netiquettes","time management","developing study skills","all of the given"],3],
+["The typical picture of a teacher being a dispenser of knowledge has been replaced by that of a ___.",["obstructor","parent","friend","facilitator"],3],
+["In 2018, Global Education and Skills Forum noted the ‘future’ teacher would need 5 skills. Which of the following is not one of them?",["Strong social skills","Data analysis","External focus","Strictness"],3],
+["Participatory education demands ___ so as to build a needs-based approach to teaching.",["creativity","stubbornness","reward","none of the given"],0],
+["Students who consider intelligence as a malleable entity tend to focus on their obstacles instead of goals.",["True","False"],1],
+["Which of the following is not a principle to enhance student learning?",["What students already know affects their learning","Learning is context-based","Students’ cognitive development and learning is limited by the general stages of development","The acquisition of knowledge and skills in the long term depends largely on practice"],2],
+["___ feedback to students is important for learning.",["Unclear","Late","Harsh","Explanatory"],3],
+["Mastery goals are those that are geared towards the acquisition or improvement of ___.",["Skills","Number of students in a classroom","Teacher feedback","None of the given"],0],
+["The vast majority of formative assessment is ___.",["Formal","Incorrect","Written","informal"],3]],
+[["Social cognition has a protracted development through infancy to ___.",["teenage","old-age","adulthood","death"],2],
+["Which of the following abilities comes under social cognition?",["Face processing","Joint attention","Theory of mind","All of the given"],3],
+["Under social cognition, abilities involved in affective processing are often called ___.",["hot","cold","white","black"],0],
+["Social schemas refer to people's mental representations of social ___.",["values","memories","skills","patterns"],3],
+["During the earliest stages of development, children are very ___-centric. They see the world from their own perspective and struggle to think about how other people may view the world.",["selfish","ego","conscious","emotional"],1],
+["A theory of mind refers to a person's ability to understand and think about the ___ of other people.",["behaviors","family backgrounds","mental states","language"],2],
+["The same social behavior in one cultural setting might have a very different meaning and interpretation if it were to occur or be observed in another culture.",["True","False"],0],
+["Social cognitive theory by Bandura focuses on concepts of ___.",["self-efficacy","modeling","observational learning","all of the given"],3],
+["The central tenet of Bandura’s social-cognitive theory is that people seek to develop a sense of ___ over the important events in their lives.",["agency","dependency","attachment","emotion"],0],
+["___ hypothesis suggests that social processes influence how information is selected, organized, integrated, and retrieved.",["activation","cognitive influence","interaction","social cue strength"],1]],
+[["Sustainability in economic sustainability is ___.",["multidimensional","bidimensional","unidimensional","none of the given"],2],
+["The term \"sustainable development\" was first mentioned in a book related to the 1972 UN Stockholm conference on ___.",["water","poverty","economic crisis","human environment"],3],
+["Environmental sustainability focuses on impacts of processes, products and services on ___.",["water","biodiversity","human health","all of the given"],3],
+["Which of the following does not come under social sustainability?",["Labour practices","Revenue generation","Human rights","Business ethics"],1],
+["SDG ___ focuses on clean water and sanitation.",["1","17","6","3"],2],
+["SDG 16 focuses on ___.",["No poverty","No hunger","Good health","Peace and justice"],3],
+["On 20 October 2020, the Higher Education Sustainability Initiative (HESI) raised the flag of higher education as a driver for sustainable development and inclusive societies on the first day of the ___ 2020.",["National Sustainability Meeting","National Teachers Meeting","Global Childrens’ Meeting","Global Education Meeting"],3],
+["Education is related to all SDGs.",["True","False"],0],
+["Successful implementation of ESD requires a shift in focus from ___.",["teaching to learning","learning to teaching","reading to speaking","knowing to ignoring"],0],
+["___ competency is the ability to reflect on one’s own role in the local community and (global) society.",["collaboration","self-awareness","strategic","normative"],1]]
+];
+const L=['Week 0','Week 1','Week 2','Week 3','Week 4','Week 5','Week 6','Week 7','Week 7 (Part 2)','Week 8','Week 9','Week 10','Week 11','Week 12'];
+const app=document.getElementById('app');let cur=[],title='';
+function home(){let h='<h1>Psychology of Learning – Tests</h1><p>Pick a week-wise test, the full test, or practise only True/False questions.</p><div class="grid">';
+W.forEach((_,i)=>h+=`<button onclick="start(${i})">${L[i]}</button>`);
+h+='</div><button class="p" onclick="start(-1)">Full Test (all 140 questions)</button><button class="p" style="margin-top:0" onclick="start(-2)">True/False Only (from full test)</button>';app.innerHTML=h}
+function start(i){cur=i<0?W.flatMap((w,k)=>w.map(q=>[...q,L[k]])):W[i].map(q=>[...q,L[i]]);if(i===-2)cur=cur.filter(q=>q[1].length===2&&q[1][0]==='True');
+cur=cur.map(q=>{if(q[1].some(o=>/^(all|none) of the (given|above)$/i.test(o))||q[1].length<3)return q;
+const idx=q[1].map((_,k)=>k).sort(()=>Math.random()-.5);return [q[0],idx.map(k=>q[1][k]),idx.indexOf(q[2]),q[3]]});
+if(i<0)cur=cur.sort(()=>Math.random()-.5);title=i===-1?'Full Test':i===-2?'True/False Test':L[i]+' Test';
+let h=`<div class="bar">${title}</div>`;
+cur.forEach((q,n)=>{h+=`<div class="q"><b>${n+1}. ${q[0]}</b>`+q[1].map((o,j)=>`<label><input type="radio" name="q${n}" value="${j}"> ${o}</label>`).join('')+'</div>'});
+h+='<button class="p" onclick="submit()">Submit</button>';app.innerHTML=h;scrollTo(0,0)}
+function submit(){let s=0,r='';cur.forEach((q,n)=>{const a=document.querySelector(`input[name=q${n}]:checked`);const v=a?+a.value:-1;const ok=v===q[2];if(ok)s++;
+r+=`<div class="q"><b>${n+1}. ${q[0]}</b><div class="${ok?'ok':'no'}">${ok?'Correct':'Wrong'} — your answer: ${v<0?'none':q[1][v]}</div>${ok?'':`<div class="ok">Correct: ${q[1][q[2]]}</div>`}<small>${q[3]}</small></div>`});
+app.innerHTML=`<h1>${title}: ${s} / ${cur.length}</h1><button class="p" onclick="home()">Back to all tests</button>`+r;scrollTo(0,0)}
+home();
+</script></body></html>
